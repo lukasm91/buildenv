@@ -147,7 +147,8 @@ else
     #Use this modules in case COSMO_TESTENV is set
     cat > $ENVIRONMENT_TEMPFILE <<- EOF
         module unuse /apps/arolla/UES/modulefiles
-        module use /apps/arolla/UES/jenkins/RH7.6/generic/easybuild/modules/all
+        module use /apps/common/UES/sandbox/kraushm/Tsa_RH7.6-foss-2018b/easybuild/modules/all
+        module load openmpi/4.0.1-gcc-7.3.0-2.30-cuda-10.0-ucx cuda10.0/toolkit/10.0.130
         # Generated with the build script
         # implicit module purge
         module load cmake/3.14.5
@@ -313,7 +314,8 @@ EOF
             # implicit module purge
             module load cmake/3.14.5
             module unuse /apps/arolla/UES/modulefiles
-            module use /apps/arolla/UES/jenkins/RH7.6/generic/easybuild/modules/all
+            module use /apps/common/UES/sandbox/kraushm/Tsa_RH7.6-foss-2018b/easybuild/modules/all
+            module load openmpi/4.0.1-gcc-7.3.0-2.30-cuda-10.0-ucx cuda10.0/toolkit/10.0.130
             module load craype-x86-skylake
             module load craype-network-infiniband
             module load slurm
